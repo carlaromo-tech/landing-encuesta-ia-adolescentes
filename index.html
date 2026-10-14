@@ -249,19 +249,17 @@ html.js .pop.is-visible{transform:none}
 <section class="why-now">
   <div class="wrap">
     <h2 class="reveal">Por qué ahora</h2>
-    <p>La inteligencia artificial (IA) ya es parte de la vida de los adolescentes. Puede ayudarles a estudiar, a entender e incluso a ordenar lo que piensan. Lo importante es que no reemplace a las personas.</p>
-    <p>Algunos le escriben sobre cómo se sienten o sobre un problema. Si sabemos cómo la están usando, podemos acompañarlos en vez de enterarnos cuando ya es tarde.</p>
-    <p class="chart-intro">Y muchas veces, ni siquiera hemos hablado del tema:</p>
+    <p>La IA puede ayudarles a estudiar. Pero algunos también le cuentan cómo se sienten. Si sabemos cómo la usan, podemos acompañarlos a tiempo.</p>
 
     <div class="stat-card reveal pop">
       <div class="stat">
         <span class="stat-num">4 de cada 10</span>
         <p class="stat-label">padres nunca han hablado con su hijo adolescente sobre los chatbots de inteligencia artificial.</p>
       </div>
-      <p class="source">Pew Research Center, <em>What parents say about their teen's AI use</em> (febrero 2026). 1.458 padres de adolescentes de 13 a 17 años, Estados Unidos. <a href="https://www.pewresearch.org/internet/2026/02/24/what-parents-say-about-their-teens-ai-use/" target="_blank" rel="noopener">Ver estudio</a>.</p>
+      <p class="source">Pew Research Center, Estados Unidos, febrero 2026. <a href="https://www.pewresearch.org/internet/2026/02/24/what-parents-say-about-their-teens-ai-use/" target="_blank" rel="noopener">Ver estudio</a>.</p>
     </div>
 
-    <p class="promise reveal">Ese dato es de Estados Unidos. En Chile todavía sabemos poco sobre para qué la usan los adolescentes y qué pasa después. Eso es lo que busca esta encuesta.</p>
+    <p class="promise reveal">En Chile casi no hay datos. Esta encuesta busca tenerlos.</p>
   </div>
 </section>
 
@@ -270,14 +268,14 @@ html.js .pop.is-visible{transform:none}
   <div class="wrap wide">
     <h2 class="reveal accent-coral">Cómo participar</h2>
     <p class="lead" style="margin-bottom:0">Dos pasos, seis minutos.</p>
-    <p class="solo">Puedes responder solo la tuya. Si responden los dos, el estudio suma la mirada de padres y adolescentes.</p>
+    <p class="solo">Anónimas y voluntarias. Si solo respondes tú, también sirve.</p>
     <div class="participa-grid">
     <ol class="steps">
       <li class="step reveal">
         <span class="step-n" aria-hidden="true">1</span>
         <div>
           <h3>Mándale su encuesta a tu hijo/a</h3>
-          <p>Está pensada para adolescentes de 12 a 18 años y toma 2 minutos. Mándasela y dale espacio para responder sin ti al lado.</p>
+          <p>2 minutos. Dale espacio para responder sin ti al lado.</p>
           <div class="actions">
             <a class="btn btn-wa" id="wa" href="#" target="_blank" rel="noopener">Enviársela por WhatsApp</a>
             <button class="link-btn" id="copy" type="button">o copiar el link</button>
@@ -300,7 +298,7 @@ html.js .pop.is-visible{transform:none}
         <span class="step-n" aria-hidden="true">2</span>
         <div>
           <h3>Responde tú</h3>
-          <p>Son preguntas sobre lo que crees que hace tu hijo/a con la IA. No te evalúan. Toma 4 minutos.</p>
+          <p>4 minutos. Es sobre lo que crees que hace tu hijo/a con la IA. No te evalúa.</p>
           <div class="actions">
             <a class="btn btn-coral" href="https://padres.conectarconsentido.com/" target="_blank" rel="noopener">Responder mi encuesta</a>
           </div>
@@ -327,8 +325,8 @@ html.js .pop.is-visible{transform:none}
   <div class="wrap">
     <h2 class="reveal">Qué te llevas</h2>
     <ul class="gains">
-      <li class="reveal"><strong>Una excusa para conversar.</strong>La encuesta puede ser el punto de partida para preguntarle a tu hijo/a cómo usa la IA, sin interrogatorio y sin sermón.</li>
-      <li class="reveal reveal-2"><strong>Los resultados generales.</strong>Cuando estén listos, te mando lo que encontramos con todas las familias que participaron. No es un informe sobre ti ni sobre tu hijo/a. Deja tu correo aquí abajo.</li>
+      <li class="reveal"><strong>Una excusa para conversar.</strong>Un punto de partida para preguntarle cómo usa la IA, sin interrogatorio ni sermón.</li>
+      <li class="reveal reveal-2"><strong>Los resultados generales.</strong>Te mando lo que encontramos entre todas las familias. No es un informe sobre ti ni sobre tu hijo/a.</li>
     </ul>
     <!-- Formulario Kit 10040306 (uid 17e5ebef01) -->
     <form class="form reveal" action="https://app.kit.com/forms/10040306/subscriptions" method="post">
@@ -382,6 +380,8 @@ html.js .pop.is-visible{transform:none}
 
 <script>
 (function(){
+  var datos = document.querySelector(".datos");
+  if (datos && window.innerWidth < 880) datos.removeAttribute("open");
   var teen = "https://encuesta.conectarconsentido.com/";
   var msg = "Oye, te mando una encuesta anónima de 2 minutos sobre cómo los adolescentes usan la IA. No pide tu nombre y yo no voy a ver lo que respondas: " + teen;
   document.getElementById("wa").href = "https://wa.me/?text=" + encodeURIComponent(msg);
